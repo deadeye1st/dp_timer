@@ -10,7 +10,7 @@ spring:
       password: Md&39kQnBVudwX
       url: jdbc:mysql://yt-sc-pdb01-out.mysql.polardb.rds.aliyuncs.com/ac_cz
       driver-class-name: com.mysql.jdbc.Driver
-    slave_TZ:
+    slave-tz:
       username: user_tz
       password: Ndke&3wPexdyb
       url: jdbc:mysql://yt-sc-pdb01-out.mysql.polardb.rds.aliyuncs.com/ac_tz
