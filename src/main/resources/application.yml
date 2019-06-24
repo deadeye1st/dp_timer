@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    master:
+      username: YTZZ_TEST
+      password: admin
+      url: jdbc:oracle:thin:@106.15.180.165:1522:XE
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+    slave:
+      username: user_cz_report
+      password: Md&39kQnBVudwX
+      url: jdbc:mysql://yt-sc-pdb01-out.mysql.polardb.rds.aliyuncs.com/ac_cz
+      driver-class-name: com.mysql.jdbc.Driver
+    slave_TZ:
+      username: user_tz
+      password: Ndke&3wPexdyb
+      url: jdbc:mysql://yt-sc-pdb01-out.mysql.polardb.rds.aliyuncs.com/ac_tz
+      driver-class-name: com.mysql.jdbc.Driver
+
