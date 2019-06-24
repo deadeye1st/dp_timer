@@ -1,7 +1,7 @@
 package com.mrcoder.sbjpamultidb;
 
 import com.mrcoder.sbjpamultidb.entity.master.StudentDao;
-import com.mrcoder.sbjpamultidb.entity.slave.TeacherDao;
+//import com.mrcoder.sbjpamultidb.entity.slave.TeacherDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,8 @@ public class SbJpaMultidbApplicationTests {
     @Autowired
     private StudentDao studentDao;
 
-    @Autowired
-    private TeacherDao teacherDao;
+//    @Autowired
+//    private TeacherDao teacherDao;
 
 
     @Autowired
@@ -37,7 +37,7 @@ public class SbJpaMultidbApplicationTests {
 
         masterTempleate.update("update  STUDENT_PLUS sp set sp.name='小芳' where sp.id=2");
         System.out.println(studentDao.findAll());
-        System.out.println(teacherDao.findAll());
+//        System.out.println(teacherDao.findAll());
         List<Map<String, Object>> students = masterTempleate.queryForList("select * from STUDENT_PLUS");
         for (Map<String, Object> student : students) {
             System.out.println(student.get("NAME"));

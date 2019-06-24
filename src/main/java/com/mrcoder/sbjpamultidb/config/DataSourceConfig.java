@@ -48,14 +48,14 @@ public class DataSourceConfig {
 
     @Bean(name = "slaveTZDataSourceProperties")
     @Qualifier("slaveTZDataSourceProperties")
-    @ConfigurationProperties(prefix = "spring.datasource.slave_TZ")
+    @ConfigurationProperties(prefix = "spring.datasource.slave-tz")
     public DataSourceProperties slaveTZDataSourceProperties() {
         return new DataSourceProperties();
     }
 
     @Bean(name = "slaveTZDataSource")
     @Qualifier("slaveTZDataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.slave_TZ")
+    @ConfigurationProperties(prefix = "spring.datasource.slave-tz")
     public DataSource slaveTZDataSource(@Qualifier("slaveTZDataSourceProperties") DataSourceProperties dataSourceProperties) {
         return dataSourceProperties.initializeDataSourceBuilder().build();
     }
